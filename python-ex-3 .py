@@ -122,28 +122,119 @@ del(k[1])
 print(k)
 
 
+# TUPLE AND IMMUTABLE
+
+l = [1,2,3]
+# This structure cannot be changed = immutable
+t = (1,2,3) 
+print(l,t)
+t[2]=10
+print(t)
+
+x,y,z =t
+print(x,z)
+z=10
+print(t)
+t=(x,y,z)
+print(t)
+
+
+# burada yapılan değişiklik tuple'a yapılmıyor. Tuple içindeki listeye yapılıyor!
+v=([1,2,3],[3,2,1])
+v[0][1]=100
+print(v)
+
+#  bu yapıda tuple dır ancak bu şekilde zorluk cıkarma paranteze al!
+t2 =1,2,3
+print(t2)
+
+
+# KÜMELER(SET) CURLY BRACKET
+# KÜMELERDE 1 ELEMAN 1 KEZ OLUR. BELİRLİ BİR SIRALAMASI YOKTUR
+# SET BİR LİSTEYİ ALIP KÜMEYE ÇEVİRİR
+k = {1,2,3,3,1,3,4,1,2,3} 
+l=[1,2,3,3,4,1,1,2,2,4,1]
+print(k)
+print(l)
+l1= set(l)
+print(l1)
+
+k4= set("enessalihgokcek")
+k5= set("bilgisayarkavramlari")
+print(k4)
+print(k5)
+
+# KÜMELER BİRLEŞİMİ = SET UNION
+print(k4|k5)
+# SET DIFFERENCE
+print(k4-k5)
+# KUME KESİŞİM
+print(k4&k5)
+# SYMMETRİC DIFFERENCE, iki yönlü küme farkı birleşimi 
+print(k4^k5)
+
+
+# Creating a dictionary
+person = {
+    "name": "John",
+    "age": 29,
+    "city": "New York"
+}
+
+# Accessing dictionary values by key
+print(person["name"])  # Output: John
+print(person["age"])   # Output: 30 
+
+# Adding a new key-value pair
+person["job"] = "Engineer"
+
+# Modifying an existing value
+person["age"] = 31
+
+# Removing a key-value pair
+del person["city"]
+
+print(person)
 
 
 
+# DICTIONARY EXAMPLE 2
+employee = {
+    "name": "usman",
+    "age": 34,    
+    "department": "data analyst"
+    }
+print(employee["name"])
+print(employee["age"])
+print(employee["department"])
+
+employee["jobs"] = "software"
+employee["gender"] = "men"
+employee["age"] = 45
+print(employee)
+del person["gender"]
+print(employee)
 
 
+# LOOPING TECHNİQUES
+campingmaterial = {"tent": "decathlon", "axe": "fiskars"}
+for t,a in campingmaterial.items():
+    print(t,a)
 
 
+# LOOPING TECHNIQUES EXAMPLE FOR DATA ANALYSIS*****
+
+product_prices = {"apple": 3, "banana": 5, "orange": 4}
+for product, price in product_prices.items():
+    product_prices[product]=price*1.5
+print(product_prices)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Comparing Sequences and Other Types 
+(1, 2, 3)              < (1, 2, 4)
+[1, 2, 3]              < [1, 2, 4]
+'ABC' < 'C' < 'Pascal' < 'Python'
+(1, 2, 3, 4)           < (1, 2, 4)
+(1, 2)                 < (1, 2, -1)
+(1, 2, 3)             == (1.0, 2.0, 3.0)
+(1, 2, ('aa', 'ab'))   < (1, 2, ('abc', 'a'), 4)
