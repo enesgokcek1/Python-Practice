@@ -70,7 +70,7 @@ print(l3)
 
 
 # List Comprehensions :List comprehensions provide a concise way to create lists
-# lambda yapısı yazdığımız yapı içinde tek kullanımlık bir değer ataması. Eğer dışına yazarsak side effect yaratabilir.
+# lambda yapısı yazdığımız yapı içinde tek kullanımlık bir değer atamasıdır. Eğer dışına yazarsak side effect yaratabilir.
 
 l=[]
 
@@ -118,25 +118,25 @@ print(k)
 mt = [[row[i] for row in m] for i in range(3)]
 print(mt)
 
-del(k[1])
-print(k)
+# del(k[1])
+# print(k)
 
 
 # TUPLE AND IMMUTABLE
 
-l = [1,2,3]
-# This structure cannot be changed = immutable
-t = (1,2,3) 
-print(l,t)
-t[2]=10
-print(t)
+# l = [1,2,3]
+# # This structure cannot be changed = immutable
+# t = (1,2,3) 
+# print(l,t)
+# # t[2]=10
+# print(t)
 
-x,y,z =t
-print(x,z)
-z=10
-print(t)
-t=(x,y,z)
-print(t)
+# x,y,z =t
+# print(x,z)
+# z=10
+# print(t)
+# t=(x,y,z)
+# print(t)
 
 
 # burada yapılan değişiklik tuple'a yapılmıyor. Tuple içindeki listeye yapılıyor!
@@ -212,7 +212,7 @@ employee["jobs"] = "software"
 employee["gender"] = "men"
 employee["age"] = 45
 print(employee)
-del person["gender"]
+del employee["gender"]
 print(employee)
 
 
@@ -238,3 +238,149 @@ print(product_prices)
 (1, 2)                 < (1, 2, -1)
 (1, 2, 3)             == (1.0, 2.0, 3.0)
 (1, 2, ('aa', 'ab'))   < (1, 2, ('abc', 'a'), 4)
+
+
+# DOSYALARI BİRLEŞTİRME KÜTÜPHANE YAPMA. import işlemi ile birden fazla kodu 
+# tek çatı altında kütüphane formatı ile bir araya getirebiliriz
+
+# Fibonacci numbers module
+
+def fib(n):    # write Fibonacci series up to n
+    a, b = 0, 1
+    while a < n:
+        print(a, end=' ')
+        a, b = b, a+b
+    print()
+
+def fib2(n):   # return Fibonacci series up to n
+    result = []
+    a, b = 0, 1
+    while a < n:
+        result.append(a)
+        a, b = b, a+b
+    return result
+
+
+# DOSYALAR
+
+file = open ('bilgisayar.txt', 'w') # bilgisayar adlı dosyaya write et yaz
+file.write('bilgisayar kavramlari\n')
+file.close()
+
+file= open("bilgisayar.txt", "r") #okumayı ifade eder
+print(file.read())
+file.close()
+
+
+# Değişkenlerin geçerlilik alanı
+
+def scope_test():
+    def do_local():
+        spam = "local spam"#local spam bu bloğun içinde geçerli
+
+    def do_nonlocal():
+        nonlocal spam
+        spam = "nonlocal spam"#nonlocal bu genel fonks içinde geçerli
+
+    def do_global():
+        global spam
+        spam = "global spam"#global ise tüm kodda tanımlı
+
+    spam = "test spam"
+    do_local()
+    print("After local assignment:", spam)
+    do_nonlocal()
+    print("After nonlocal assignment:", spam)
+    do_global()
+    print("After global assignment:", spam)
+
+scope_test()
+print("In global scope:", spam)
+
+# CLASS AND OBJECT
+
+class car:
+    speed= 0
+    color="green"
+    def speedUp(self):
+        self.speed = self.speed + 1
+x = car() 
+x.speed = 100;
+x.speedUp()
+print("car speed", x.speed)
+    
+    
+
+
+class car:
+    speed= 0
+    color="green"
+    def speedUp(self):
+        self.speed = self.speed + 1
+x = car() 
+x.speed = 100;
+x.speedUp()
+print("car speed", x.speed)
+    
+    
+
+
+
+
+class car:
+    speed= 0
+    color="green"
+    def speedUp(self):
+        self.speed = self.speed + 1
+x = car() 
+x.speed = 100;
+x.speedUp()
+print("car speed", x.speed)
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
