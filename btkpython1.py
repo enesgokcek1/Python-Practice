@@ -94,6 +94,210 @@ print(changeCharacter)
 
 
 
+# LIST TRAINING 
+
+carList = ["bmw", "mercedes", "opel", "mazda"]
+print(len(carList))
+ilkEleman = carList[0]
+sonEleman = carList[-1]
+print(ilkEleman, sonEleman)
+# mazdayı toyota ile değiştirin
+carList[-1] = "toyota"
+print(carList)
+# mercedes listeye dahil mi
+Mercedes = "mercedes" in carList
+print(Mercedes)
+# ilk 3 aracı seç
+betweenValue = carList[0:3]
+print(betweenValue)
+# son 2 elemanı seç
+lastTwoCar = carList[-2:] = ["toyota", "renault"]
+print(lastTwoCar)
+addCar = carList + ["audi","nissan"]
+print(addCar) 
+# delete last car
+del carList[-1]
+print(carList)
+# tersten yazdır
+ters = carList[::-1]
+print(ters)
+
+# liste yazdırma
+studentA = ["yiğit", "bilgi",2010,[53,67,67]]
+studentB = ["ahmet", "bilgi",2013,[43,37,47]]
+studentC = ["osman", "bilgi",1009,[73,67,57]]
+
+listeler = (studentA + studentB + studentC )
+print(listeler)
+
+# or
+
+listleYapısı = f"{studentA[0]} {studentA[1]} {2019-studentA[2]} yaşında ve not ortalamsı {(studentA[3][0] + studentA[3][1] + studentA[3][2])/3}           "
+print(listleYapısı)
+
+
+# LİSTE METOT ÇALIŞMASI
+names = ["ali" , "yağmur" , "hakan", "deniz"]
+years = [1998,2000,1998,1987]
+names.append("cenk")
+# liste basına ekleme
+names.insert(0,"sena")
+names.remove("deniz")
+# indeksini bulma
+index = names.index("ali")
+print(index)
+
+# ali listede var mı
+find = "ali" in names
+print(find)
+
+# liste eleman ters çevir
+names.reverse()
+
+# liste elemanı alfabetik sırala
+names.sort()
+
+# years listesini rakamsal büyüklüğe göre sırala
+years.sort()
+print(years)
+
+# kaç tane 1998 vardır
+howManyYears = years.count(1998)
+print(howManyYears)
+
+# tüm eleman silme
+years.clear()
+
+# kullanıcıdan marka al liste yap
+marka1 = input("marka: ")
+marka2 = input("marka: ")
+marka3 = input("marka: ")
+
+
+markalar= [marka1 , marka2 , marka3]
+print(markalar)
+
+
+
+# TUPLE
+
+normalList = [1,2,3]
+tupleList = (1,"iki",3)
+# tuple list is not changing!
+tupleList.append(44)
+print(tupleList)
+
+
+
+# DICTIONRY(key,value)
+
+plakalar = {"eskişehir" : 14 , "istanbul" : 34 , "bursa" : 16}
+print(plakalar["eskişehir"])
+
+plakalar["bartın"] = 74
+print(plakalar)
+
+users={
+  "enes":{
+          "age":22,
+          "gender":"Male",
+          "email":"asdasd@gmail.com",
+          "phone":"432334"
+      
+      
+      },
+  "osman":
+  {
+          "age":24,
+          "gender":"Male",
+          "email":"aascczd@gmail.com",
+          "phone":"4334095"
+   
+   }
+  }
+
+print(users["enes"]["age"])
+
+
+# DICTIONARY EXAMPLE
+students = {
+"120": {
+    "name": "ali",
+    "surname": "yılmaz",
+    "age": 22
+},
+"111": {
+    "name": "osman",
+    "surname": "kılıc",
+    "age": 22
+},
+"132": {
+    "name": "haydar",
+    "surname": "ogut",
+    "age": 25
+}
+}
+
+# number verisini al ve students a ekle
+students={}
+number = input("lütfen numaranı gir:")
+name = input("lütfen ad gir:")
+surname= input("lütfen soyad gir:")
+age =int(input("lütfen yaş gir:"))
+students.update(
+    {
+        number:
+            {
+                "ad":name,
+                "soyad": surname,
+                "yaş":age
+                }
+        
+    
+    })
+
+print(students)
+
+
+# set kavramı
+
+fruits ={"orange",,"apple","banana"}
+# print(fruits[0]) bu şekilde indeks alınamaz 
+
+for x in fruits:
+print(x)
+fruits.add("cherry")
+fruits.update(["mango","grape"])
+prints(fruits)    
+
+
+#  VALUE TYPES --> string,number
+
+x = 5
+y=25
+x=y
+y=10
+print(x,y)
+
+# REFERENCE TYPES -->list
+
+a = ["apple","banana"]
+b = ["hgj","banana"]
+a=b
+b[0]="grape"
+print(a,b)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
