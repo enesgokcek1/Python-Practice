@@ -288,6 +288,129 @@ b[0]="grape"
 print(a,b)
 
 
+# atama operator egzersiz
+
+x,y,z = 2,5,10
+toplam= x+y+z
+mumbers = 1,5,7,10,6
+kullaniciDegeri = input("deger giriniz:")
+kullaniciDegeri = int(kullaniciDegeri)
+islem = kullaniciDegeri-toplam
+print("islem farkı:",islem)
+kalnsizBolme = y//x
+toplamMod =toplam%3
+ 
+
+# karşılaştırma operatörü
+
+a = int(input("sayı giriniz:"))
+b = int(input("sayı giriniz:"))
+if a>b:
+    
+     print("a b den büyüktür")
+     
+else:
+    print("b a dan büyüktür")
+     
+
+vize1 = int(input("vize 1 : "))
+vize2 = int(input("vize 2 : "))
+final = int(input("final : "))
+ortalama = (vize1 + vize2 )*0.3 + (final*0.6)
+if ortalama<50:
+    print("kaldın" , ortalama)
+else:
+    print("geçtin", ortalama)
+    
+
+girilenSayi = int(input("sayi giriniz"))
+if girilenSayi%2==0 and girilenSayi!=0:
+    print("girilen sayi çift", girilenSayi)
+elif girilenSayi%2==1:
+    print("girilen sayi tektir", girilenSayi)
+elif girilenSayi==0:
+    print("girilen sayı sıfırdır" , girilenSayi)
+    
+
+girilenSayi2 = int(input("sayi giriniz:"))
+if girilenSayi2>0:
+    print("girilen sayi pozitiftir", girilenSayi2)
+elif girilenSayi2<0:
+    print("girilen sayi negatiftir", girilenSayi2)
+elif girilenSayi2==0:
+    print("girilen sayi nötr", girilenSayi2)
+
+
+email = "email@sadikturan.com"
+password = "abc123"
+userEmail = input("lütfen email adresinizi giriniz : ")
+userPassword = input("lütfen şifreinizi giriniz ")
+if userEmail==email and password == userPassword:
+    print("hoşgeldiniz ")
+elif userEmail ==email and password !=userPassword:
+    print("kullanıcı adı veya şifre yanlış ")
+elif userEmail !=email and password ==userPassword:
+    print("kullanıcı adı veya şifre yanlış ")
+else:
+    print("kullanıcı adı veya şifre yanlış ")
+
+
+
+
+# IDENTITY(is operator) (2 nesne aynı bellek adresinde mi?)
+x =[1,2,3]
+y= [1,2,3]
+print(x is y)
+z=x
+print(x is z)
+
+# Membership operator : in
+
+x = ["apple", "banana"]
+print("banana" in x)
+name ="çınar"
+print("a" in name)
+print("a" not in name)
+
+
+# ELSE İF ALIŞTIRMA
+
+name = input("isiminiz : ")
+age = input("yaşınız : ")
+education = input("eğitim durumu: ")
+
+if(age>=18) and (education=="lise") or egitim=="üniversite":
+    print("ehliyet alabilirsiniz")
+else:
+    print("ehliyet alamaz")
+
+import datetime
+
+tarih = input("aracaınız hangi tarihte trafiğe çıktı (YYYY/MM/DD):")
+tarih = tarih.split("/")
+print(tarih[0])
+print(tarih[1])
+print(tarih[2])
+
+trafigecikis = datetime.datetime(int(tarih[0]),int(tarih[1]),int(tarih[1]))
+simdi=datetime.datetime.now()
+simdi = datetime.datetime.now()
+fark = simdi-trafigecikis
+print(fark)
+
+
+days = input("aracınız kaç gündür trafikte")
+
+if days<=365:
+    print("1.servis aralığı")
+elif days>365 and days<=365*2:
+    print("2.servis aralığı")
+elif days>365*2 and days<=365*3:
+    print("2.servis aralığı")
+else:
+    print("hatalı süre")
+    
+
 
 
 
