@@ -124,17 +124,58 @@ print(array6)
 array7= np.random.randint(10,30,5)
 print(array7)
 
+# -1 ile 1 arasında 10 adet satı üretin
+result = np.random.randn(10)
+print(result)
 
+# 3x5 boyutlarında 10-50 arasında rastgele bir matris olusturun
+matris= np.random.randint(-10,50,15).reshape(3,5)
+print(matris)
 
+#üretilen matrisin satır ve sütun sayıları toplamlarını hesapla
+rowTotal= matris.sum(axis = 1)
+colTotal= matris.sum(axis = 0)
+print(rowTotal)
+print(colTotal)
 
+# üretilen matrisin en büyük ve en küçük değeri ve ortalamsı nedir
+maxVal = matris.max()
+minVal = matris.min()
+average= matris.mean()
+print(maxVal)
+print(minVal)
+print(average)
 
+#üretilen matrisin en büyük değerinin indeksi kaçtır?
+argMax = matris.argmax()
+argMin = matris.argmin()
+print(argMax)
+print(argMin)
 
+# 10 20 arasındaki sayıları içeren dizinin ilk 3 elemanını seçiniz
+arr = np.arange(10,20)
+print(arr)
 
+result= arr[0:3]
+print(result)
 
+#üretilen dizinin elemanlarını tersten yazdırın
+result = arr[::-1]
+print(result)
 
+# üretilen matrisin ilk satırını seçin
+result= matris[0]
+print(result)
 
+#üretilen matrisin 2.satır ve 3.sütundaki elemanı seçiniz
+result= matris[1,2]
+print(result)
 
+# üretilen matrisin tüm satırlardaki ilk elemanı seçiniz.
+result = matris[:,1]
+print(result)
 
-
-
-
+# üretilen matris elemanlarının hangisi pozitif çift sayıdır
+cift= matris[matris % 2==0]
+result = cift[cift>0]
+print(result)
